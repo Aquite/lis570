@@ -1,9 +1,14 @@
 import logo from "./logo.svg";
+import { useFetch } from "./hooks/useFetch";
 import "./App.css";
 import Header from "./header/header-mini.js";
 import MapChart from "./MapChart";
 
 function App() {
+  const [dataLoc, loadingLoc] = useFetch(
+    "https://raw.githubusercontent.com/Aquite/lis570/main/src/data/libraryloc.csv"
+  );
+
   return (
     <div className="App">
       <Header />
@@ -12,7 +17,7 @@ function App() {
         <p>Test page</p>
       </header>
       <main>
-        <MapChart />
+        {loadingLoc ? <p>Loading...</p> : <MapChart dataLoc={dataLoc} />}
       </main>
     </div>
   );
