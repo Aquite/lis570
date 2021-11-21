@@ -30,7 +30,6 @@ const MapChart = (dataLoc) => {
         )}
       </Geographies>
       {markers.map((lib) => {
-        console.log([lib.Longitude, lib.Latitude]);
         return (
           <Marker key={lib.Library} coordinates={[lib.Longitude, lib.Latitude]}>
             <g
