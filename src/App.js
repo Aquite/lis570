@@ -6,7 +6,7 @@ import MapChart from "./MapChart";
 
 function App() {
   const [dataLoc, loadingLoc] = useFetch(
-    "https://raw.githubusercontent.com/Aquite/lis570/main/src/data/libraryloc.csv"
+    "https://raw.githubusercontent.com/Aquite/lis570/main/data/libraryloc.csv"
   );
 
   return (
