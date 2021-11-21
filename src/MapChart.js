@@ -15,9 +15,8 @@ const MapChart = (dataLoc) => {
   markers.sort((l1, l2) => {
     return l2.Latitude - l1.Latitude;
   });
-  console.log(markers);
   return (
-    <ComposableMap projection="geoAlbers">
+    <ComposableMap projection="geoAlbersUsa">
       <ZoomableGroup zoom={1}>
         <Geographies geography={geoUrl}>
           {({ geographies }) => (
