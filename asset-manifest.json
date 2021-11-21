@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/lis570/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/lis570/static/js/main.370bd2a5.chunk.js",
-    "main.js.map": "/lis570/static/js/main.370bd2a5.chunk.js.map",
-    "runtime-main.js": "/lis570/static/js/runtime-main.e893c209.js",
-    "runtime-main.js.map": "/lis570/static/js/runtime-main.e893c209.js.map",
-    "static/js/2.cda3b070.chunk.js": "/lis570/static/js/2.cda3b070.chunk.js",
-    "static/js/2.cda3b070.chunk.js.map": "/lis570/static/js/2.cda3b070.chunk.js.map",
-    "static/js/3.48bea19f.chunk.js": "/lis570/static/js/3.48bea19f.chunk.js",
-    "static/js/3.48bea19f.chunk.js.map": "/lis570/static/js/3.48bea19f.chunk.js.map",
+    "main.css": "/lis570/static/css/main.b6143526.chunk.css",
+    "main.js": "/lis570/static/js/main.f3cc150f.chunk.js",
+    "main.js.map": "/lis570/static/js/main.f3cc150f.chunk.js.map",
+    "runtime-main.js": "/lis570/static/js/runtime-main.675193df.js",
+    "runtime-main.js.map": "/lis570/static/js/runtime-main.675193df.js.map",
+    "static/css/2.383c0125.chunk.css": "/lis570/static/css/2.383c0125.chunk.css",
+    "static/js/2.a7c40bad.chunk.js": "/lis570/static/js/2.a7c40bad.chunk.js",
+    "static/js/2.a7c40bad.chunk.js.map": "/lis570/static/js/2.a7c40bad.chunk.js.map",
     "index.html": "/lis570/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/lis570/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.cda3b070.chunk.js.LICENSE.txt": "/lis570/static/js/2.cda3b070.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/lis570/static/media/logo.6ce24c58.svg"
+    "static/css/2.383c0125.chunk.css.map": "/lis570/static/css/2.383c0125.chunk.css.map",
+    "static/css/main.b6143526.chunk.css.map": "/lis570/static/css/main.b6143526.chunk.css.map",
+    "static/js/2.a7c40bad.chunk.js.LICENSE.txt": "/lis570/static/js/2.a7c40bad.chunk.js.LICENSE.txt",
+    "static/media/mini.css": "/lis570/static/media/uw-sprite-mini.d2ad539d.svg",
+    "static/media/lib.bd024724.svg": "/lis570/static/media/lib.bd024724.svg",
+    "static/media/logo.5d0e6ffb.svg": "/lis570/static/media/logo.5d0e6ffb.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e893c209.js",
-    "static/js/2.cda3b070.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.370bd2a5.chunk.js"
+    "static/js/runtime-main.675193df.js",
+    "static/css/2.383c0125.chunk.css",
+    "static/js/2.a7c40bad.chunk.js",
+    "static/css/main.b6143526.chunk.css",
+    "static/js/main.f3cc150f.chunk.js"
   ]
 }
