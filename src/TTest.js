@@ -1,29 +1,24 @@
 import React from "react";
+import ttest from "ttest";
 
-const TTest = ({ dataLib, dataLoc }) => {
+const TTest = ({ dataLib, dataLoc, metric }) => {
   let noSex = [];
   let sex = [];
   dataLib = dataLib.slice(0, 20);
-  console.log(dataLib);
-  console.log(dataLoc);
   for (let i = 0; i < dataLoc.length; i++) {
     let libraryName = dataLoc[i].Library;
     let sum = dataLib.reduce((a, b) => {
       return a + parseInt(b[libraryName]);
     }, 0);
-    if (dataLoc[i].Taught == 1) {
+    if (dataLoc[i][metric] == 1) {
       sex.push(sum);
-      if (isNaN(sum)) {
-        console.log(dataLoc[i].Library);
-      }
     } else {
       noSex.push(sum);
     }
   }
-  console.log("sex:", sex);
-  console.log("nosex:", noSex);
+  const test = ttest(sex, noSex);
 
-  return <p>test</p>;
+  return <p>{metric + ": " + test.pValue()}</p>;
 };
 
 export default TTest;

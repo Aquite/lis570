@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./header/header-mini.js";
 import MapChart from "./MapChart";
 import TTest from "./TTest.js";
+import React from "react";
 
 function App() {
   const [dataLoc, loadingLoc] = useFetch(
@@ -26,7 +27,15 @@ function App() {
         {loadingLoc || loadingLib ? (
           <p>Loading...</p>
         ) : (
-          <TTest dataLib={dataLib} dataLoc={dataLoc} />
+          <React.Fragment>
+            <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Taught"} />
+            <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Rural"} />
+            <TTest
+              dataLib={dataLib}
+              dataLoc={dataLoc}
+              metric={"Conservative"}
+            />
+          </React.Fragment>
         )}
       </main>
     </div>
