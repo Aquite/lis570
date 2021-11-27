@@ -18,7 +18,9 @@ function importAll(r) {
 }
 
 const App = () => {
-  const [focLib, setFocLib] = useState("Yolo County Library");
+  const [focLib, setFocLib] = useState(
+    "Click a marker on the map to show library-specifc results!"
+  );
 
   const [dataLoc, loadingLoc] = useFetch(
     "https://raw.githubusercontent.com/Aquite/lis570/main/data/libraryloc.csv"
@@ -37,7 +39,6 @@ const App = () => {
       <Header />
       <main style={{ margin: "0 auto", maxWidth: "50em" }}>
         <h1>LIS 570 Sex Education and Libraries</h1>
-        <p>Test page</p>
         {loadingLoc || loadingLib ? (
           <p>Loading...</p>
         ) : (
@@ -48,18 +49,23 @@ const App = () => {
               focLib={focLib}
               setFocLib={setFocLib}
             />
+            <p>{focLib}</p>
             <Container style={{ margin: "0 auto", maxWidth: "50em" }}>
               <Row>
                 {dataLib.slice(0, 20).map((book) => {
                   return (
                     <Col className="w-sm-10 w-20">
                       <Card style={{ width: "auto" }}>
-                        {book[focLib] == 1 ? (
-                          <Card.Img src={covers[book.image].default} />
+                        {book[focLib] == 0 ? (
+                          <Card.Img
+                            src={covers[book.image].default}
+                            alt={"not included: " + book.Title}
+                            className="gs"
+                          />
                         ) : (
                           <Card.Img
                             src={covers[book.image].default}
-                            className="gs"
+                            alt={"included: " + book.Title}
                           />
                         )}
                       </Card>
@@ -68,6 +74,18 @@ const App = () => {
                 })}
               </Row>
             </Container>
+            <h2>Questionnaire Responses</h2>
+            <ul>
+              <li>Library Patrons</li>
+              <li>Library Employees</li>
+              <li>Educators</li>
+            </ul>
+            <h2>Ask a Librarian</h2>
+            <ul>
+              <li>Collection Development</li>
+              <li>Accessibility</li>
+              <li>Censorship</li>
+            </ul>
             <p>P-values:</p>
             <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Taught"} />
             <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Rural"} />
