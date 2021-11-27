@@ -1,13 +1,13 @@
-import logo from "./logo.svg";
 import { useFetch } from "./hooks/useFetch";
 import "./App.css";
 import Header from "./header/header-mini.js";
 import MapChart from "./MapChart";
 import TTest from "./TTest.js";
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 
 function importAll(r) {
   let images = {};
@@ -17,7 +17,9 @@ function importAll(r) {
   return images;
 }
 
-function App() {
+const App = () => {
+  const [focLib, setFocLib] = useState("Yolo County Library");
+
   const [dataLoc, loadingLoc] = useFetch(
     "https://raw.githubusercontent.com/Aquite/lis570/main/data/libraryloc.csv"
   );
@@ -29,26 +31,38 @@ function App() {
   const covers = importAll(
     require.context("./img/bks", false, /\.(png|jpe?g|svg)$/)
   );
+
   return (
     <div className="App">
       <Header />
-      <header className="App-header">
+      <main style={{ margin: "0 auto", maxWidth: "50em" }}>
         <h1>LIS 570 Sex Education and Libraries</h1>
         <p>Test page</p>
-      </header>
-      <main>
         {loadingLoc || loadingLib ? (
           <p>Loading...</p>
         ) : (
           <React.Fragment>
-            <MapChart dataLoc={dataLoc} />
-            <Container>
+            <MapChart
+              dataLoc={dataLoc}
+              dataLib={dataLib}
+              focLib={focLib}
+              setFocLib={setFocLib}
+            />
+            <Container style={{ margin: "0 auto", maxWidth: "50em" }}>
               <Row>
-                {dataLib.slice(0, 1).map((book) => {
-                  console.log(book);
+                {dataLib.slice(0, 20).map((book) => {
                   return (
-                    <Col>
-                      <img src={covers[book.Title].default} />
+                    <Col className="w-sm-10 w-20">
+                      <Card style={{ width: "auto" }}>
+                        {book[focLib] == 1 ? (
+                          <Card.Img src={covers[book.image].default} />
+                        ) : (
+                          <Card.Img
+                            src={covers[book.image].default}
+                            className="gs"
+                          />
+                        )}
+                      </Card>
                     </Col>
                   );
                 })}
@@ -68,6 +82,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;
