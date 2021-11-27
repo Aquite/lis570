@@ -9,6 +9,14 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+function importAll(r) {
+  let images = {};
+  r.keys().forEach((item, index) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
+
 function App() {
   const [dataLoc, loadingLoc] = useFetch(
     "https://raw.githubusercontent.com/Aquite/lis570/main/data/libraryloc.csv"
@@ -18,6 +26,9 @@ function App() {
     "https://raw.githubusercontent.com/Aquite/lis570/main/data/libraries.csv"
   );
 
+  const covers = importAll(
+    require.context("./img/bks", false, /\.(png|jpe?g|svg)$/)
+  );
   return (
     <div className="App">
       <Header />
@@ -26,17 +37,23 @@ function App() {
         <p>Test page</p>
       </header>
       <main>
-        {loadingLoc ? (
-          <p>Loading...</p>
-        ) : (
-          <div>
-            <MapChart dataLoc={dataLoc} />
-          </div>
-        )}
         {loadingLoc || loadingLib ? (
           <p>Loading...</p>
         ) : (
           <React.Fragment>
+            <MapChart dataLoc={dataLoc} />
+            <Container>
+              <Row>
+                {dataLib.slice(0, 1).map((book) => {
+                  console.log(book);
+                  return (
+                    <Col>
+                      <img src={covers[book.Title].default} />
+                    </Col>
+                  );
+                })}
+              </Row>
+            </Container>
             <p>P-values:</p>
             <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Taught"} />
             <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Rural"} />
