@@ -5,7 +5,8 @@ const TTest = ({ dataLib, dataLoc, metric }) => {
   let noSex = [];
   let sex = [];
   dataLib = dataLib.slice(0, 20);
-  for (let i = 0; i < dataLoc.length - 1; i++) {
+
+  for (let i = 0; i < dataLoc.length; i++) {
     let libraryName = dataLoc[i].Library;
     let sum = dataLib.reduce((a, b) => {
       return a + parseInt(b[libraryName]);

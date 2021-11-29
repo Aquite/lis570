@@ -91,3 +91,18 @@
 .gs {
   filter: grayscale(100%) brightness(50%);
 }
+
+.nav-link:not(.active) {
+  background-color: White;
+  color: #4b2e83;
+}
+
+.nav-link {
+  background-color: #4b2e83;
+  color: white;
+}
+
+h2 {
+  padding-bottom: 0.4em;
+  padding-top: 0.8em;
+}
