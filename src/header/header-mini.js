@@ -3,7 +3,7 @@ import "./mini.css";
 
 function Header() {
   return (
-    <div id="uw-container">
+    <div id="uw-container" className="sticky-top">
       <div id="uw-container-inner">
         <header className="uw-thinstrip">
           <nav className="uw-thin-strip-nav">
