@@ -17,6 +17,8 @@ import {
 const Survey = ({ dataSurv }) => {
   console.log(dataSurv);
   const seekMap = new Map();
+  const oftenMap = new Map();
+  const goMap = new Map();
   dataSurv.forEach((r) => {
     r["Where do you seek sex education?"].split(";").forEach((e) => {
       if (seekMap.has(e)) {
@@ -25,6 +27,25 @@ const Survey = ({ dataSurv }) => {
         seekMap.set(e, 1);
       }
     });
+    let val = r["How often were those books in your library? "];
+    if (val != "") {
+      if (oftenMap.has(val)) {
+        oftenMap.set(val, oftenMap.get(val) + 1);
+      } else {
+        oftenMap.set(val, 1);
+      }
+    }
+    let val2 =
+      r[
+        "How likely are you to go to the library for sex education materials? "
+      ];
+    if (val2 != "") {
+      if (goMap.has(val2)) {
+        goMap.set(val2, goMap.get(val2) + 1);
+      } else {
+        goMap.set(val2, 1);
+      }
+    }
   });
   const seek = [];
   seekMap.forEach(function (val, key) {
@@ -32,6 +53,26 @@ const Survey = ({ dataSurv }) => {
       seek.push({ source: key, "Number of Responses": val });
     }
   });
+  const often = [];
+  oftenMap.forEach(function (val, key) {
+    if (val > 1) {
+      often.push({ Rating: key, "Number of Responses": val });
+    }
+  });
+  often.sort((e1, e2) => {
+    return e1.Rating > e2.Rating;
+  });
+
+  const go = [];
+  goMap.forEach(function (val, key) {
+    if (val > 1) {
+      go.push({ Rating: key, "Number of Responses": val });
+    }
+  });
+  go.sort((e1, e2) => {
+    return e1.Rating > e2.Rating;
+  });
+  console.log(go);
 
   return (
     <React.Fragment>
@@ -112,6 +153,27 @@ const Survey = ({ dataSurv }) => {
                     </li>
                   </ul>
                 </p>
+                <div style={{ width: "100%", height: 300 }}>
+                  <ResponsiveContainer>
+                    <BarChart
+                      width={500}
+                      height={300}
+                      data={often}
+                      margin={{
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                      }}
+                    >
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="Rating" />
+                      <YAxis />
+                      <Tooltip />
+                      <Bar dataKey="Number of Responses" fill="#4b2e83" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
                 <p>
@@ -143,6 +205,27 @@ const Survey = ({ dataSurv }) => {
                     </li>
                   </ul>
                 </p>
+                <div style={{ width: "100%", height: 300 }}>
+                  <ResponsiveContainer>
+                    <BarChart
+                      width={500}
+                      height={300}
+                      data={go}
+                      margin={{
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                      }}
+                    >
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="Rating" />
+                      <YAxis />
+                      <Tooltip />
+                      <Bar dataKey="Number of Responses" fill="#4b2e83" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
               </Tab.Pane>
               <Tab.Pane eventKey="fourth">
                 <p>There is consistent confidence in librarians:</p>
