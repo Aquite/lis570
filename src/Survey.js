@@ -77,7 +77,7 @@ const Survey = ({ dataSurv }) => {
   return (
     <React.Fragment>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-        <Row>
+        <Row style={{ margin: "0px" }}>
           <Col sm={3}>
             <Nav variant="pills" className="flex-column">
               <Nav.Item>

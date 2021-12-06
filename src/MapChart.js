@@ -8,7 +8,7 @@ import {
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
-const MapChart = ({ dataLoc, dataLib, focLib, setFocLib }) => {
+const MapChart = ({ dataLoc, dataLib, focLib, setFocLib, focMethod }) => {
   const markers = dataLoc;
   markers.sort((l1, l2) => {
     return l2.Latitude - l1.Latitude;

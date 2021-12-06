@@ -10,6 +10,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import Nav from "react-bootstrap/Nav";
 
 function importAll(r) {
   let images = {};
@@ -32,6 +33,11 @@ const App = () => {
     "https://raw.githubusercontent.com/Aquite/lis570/main/data/survey.csv"
   );
 
+  const [focMethod, setFocMethod] = useState("collections");
+  const handleSelectMethod = (eventKey) => {
+    setFocMethod(eventKey);
+  };
+
   const [focLib, setFocLib] = useState(
     "Click a marker on the map to show library-specifc results!"
   );
@@ -43,7 +49,9 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <main style={{ margin: "0 auto", maxWidth: "50em" }}>
+      <main
+        style={{ margin: "0 auto", maxWidth: "50em", paddingInline: "1em" }}
+      >
         <h1>LIS 570 Sex Education and Libraries</h1>
         <h2>Description</h2>
         <p>
@@ -90,50 +98,70 @@ const App = () => {
           prospective quotes that we think are worth publishing on the site for
           peer review.
         </p>
-        <h2>Definitions</h2>
-        <Definitions />
-        <h2>Collection Development</h2>
+        <h2>View Our Raw Data</h2>
         {loadingLoc || loadingLib ? (
           <p>Loading...</p>
         ) : (
           <React.Fragment>
+            <Nav
+              variant="tabs"
+              defaultActiveKey="collections"
+              onSelect={handleSelectMethod}
+            >
+              <Nav.Item>
+                <Nav.Link eventKey="collections" href="#/home">
+                  Library Collections
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="questionnaire">Questionnaire</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="interviews">Librarian Interviews</Nav.Link>
+              </Nav.Item>
+            </Nav>
             <MapChart
               dataLoc={dataLoc}
               dataLib={dataLib}
               focLib={focLib}
               setFocLib={setFocLib}
+              focMethod={focMethod}
             />
-            <p>{focLib}</p>
-            <Container style={{ margin: "0 auto", maxWidth: "50em" }}>
-              <Row>
-                {dataLib.slice(0, 20).map((book) => {
-                  return (
-                    <Col className="w-sm-10 w-20">
-                      <Card style={{ width: "auto" }}>
-                        {book[focLib] == 0 ? (
-                          <Card.Img
-                            src={covers[book.image].default}
-                            alt={"not included: " + book.Title}
-                            className="gs"
-                          />
-                        ) : (
-                          <Card.Img
-                            src={covers[book.image].default}
-                            alt={"included: " + book.Title}
-                          />
-                        )}
-                      </Card>
-                    </Col>
-                  );
-                })}
-              </Row>
-            </Container>
+            {focMethod == "collections" ? (
+              <React.Fragment>
+                <p>{focLib}</p>
+                <Container style={{ margin: "0 auto", maxWidth: "50em" }}>
+                  <Row>
+                    {dataLib.slice(0, 20).map((book) => {
+                      return (
+                        <Col className="w-sm-10 w-20">
+                          <Card style={{ width: "auto" }}>
+                            {book[focLib] == 0 ? (
+                              <Card.Img
+                                src={covers[book.image].default}
+                                alt={"not included: " + book.Title}
+                                className="gs"
+                              />
+                            ) : (
+                              <Card.Img
+                                src={covers[book.image].default}
+                                alt={"included: " + book.Title}
+                              />
+                            )}
+                          </Card>
+                        </Col>
+                      );
+                    })}
+                  </Row>
+                </Container>
+              </React.Fragment>
+            ) : null}
           </React.Fragment>
         )}
-        <h2>Questionnaire Responses</h2>
+        <h2>View Our Findings</h2>
         <br />
         {loadingSurv ? (
-          <p>Loading Survey...</p>
+          <p>Loading Findings...</p>
         ) : (
           <Survey dataSurv={dataSurv} />
         )}
@@ -156,6 +184,8 @@ const App = () => {
             <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"TrumpWin"} />
           </React.Fragment>
         )}
+        <h2>Definitions</h2>
+        <Definitions />
       </main>
     </div>
   );
