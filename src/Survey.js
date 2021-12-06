@@ -101,20 +101,24 @@ const Survey = ({ dataSurv }) => {
           <Col sm={9}>
             <Tab.Content>
               <Tab.Pane eventKey="first">
+                <h3>
+                  Patrons would rather use the internet than find sexual
+                  education materials at the public library.
+                </h3>
                 <p>
                   The internet is preferred over all other sources of sex
                   education information:
-                  <ul>
-                    <li>
-                      78% of respondents included “Website” under “Where do you
-                      seek sex education?”
-                    </li>
-                    <li>
-                      Book was second most popular, with 50% of respondents
-                      including “Book”
-                    </li>
-                  </ul>
                 </p>
+                <ul>
+                  <li>
+                    78% of respondents included “Website” under “Where do you
+                    seek sex education?”
+                  </li>
+                  <li>
+                    Book was second most popular, with 50% of respondents
+                    including “Book”
+                  </li>
+                </ul>
 
                 <div style={{ width: "100%", height: 300 }}>
                   <ResponsiveContainer>
@@ -138,25 +142,50 @@ const Survey = ({ dataSurv }) => {
                   </ResponsiveContainer>
                 </div>
                 <br />
+                <h3>
+                  Interview with Paula, a Public Librarian from a liberal city
+                  in the Pacific Northwest
+                </h3>
+                <AudioPlayer src="https://github.com/Aquite/lis570/blob/main/data/audio/paulaInternet.mp3?raw=true" />
+                <p>Transcript:</p>
+                <blockquote style={{ paddingLeft: "4vw" }}>
+                  <p>
+                    The Internet, I think, would predominate over probably
+                    anything we have here. And, because especially on the
+                    subject of sexuality it's anonymity. It's so personal. To
+                    leave your house, go to a library, and go find a book and
+                    carry it around. I mean, you'd have to be pretty confident
+                    in yourself, especially if it were a subject of like, you
+                    know, a gender identity change or something like that to -
+                    you know what I mean? It would be much more private to just
+                    search online, And not, you know, involve us.
+                  </p>
+                </blockquote>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
+                <h3>
+                  Sex education materials are often readily available in public
+                  libraries, yet patrons are not confident in their ability to
+                  find them
+                </h3>
                 <p>
                   Students are not confident in their ability to find relevant
                   materials and information from their local library:
-                  <ul>
-                    <li>
-                      Only respondents 18 and 24 responded with a Likert “5” to
-                      the question “How often were those books in your library?”
-                      Respondent 18 is a Queer educator from Virginia now living
-                      in Oregon, and respondent 24 is a library professional who
-                      specified no additional demographic information.
-                    </li>
-                    <li>
-                      57.8% of respondents rated themselves at a Likert “1” or
-                      “2” for the same question (26.7% at “1”, 31.1% at “2”).
-                    </li>
-                  </ul>
                 </p>
+                <ul>
+                  <li>
+                    Only respondents 18 and 24 responded with a Likert “5” to
+                    the question “How often were those books in your library?”
+                    Respondent 18 is a Queer educator from Virginia now living
+                    in Oregon, and respondent 24 is a library professional who
+                    specified no additional demographic information.
+                  </li>
+                  <li>
+                    57.8% of respondents rated themselves at a Likert “1” or “2”
+                    for the same question (26.7% at “1”, 31.1% at “2”).
+                  </li>
+                </ul>
+
                 <div style={{ width: "100%", height: 300 }}>
                   <ResponsiveContainer>
                     <BarChart
@@ -178,6 +207,70 @@ const Survey = ({ dataSurv }) => {
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
+                <p>
+                  Despite this, library collections on average contained 12.1 of
+                  our 20 curated titles, or around 60% of them. Additionally,
+                  three of our interviewed librarians actively monitored and
+                  curated their collections to include sex education and LGBT
+                  materials:
+                </p>
+                <h3>
+                  Interview with Amy, a Librarian from a liberal city in the
+                  Pacific Northwest
+                </h3>
+                <AudioPlayer src="https://github.com/Aquite/lis570/blob/main/data/audio/amyPatrons.mp3?raw=true" />
+                <p>Transcript:</p>
+                <blockquote style={{ paddingLeft: "4vw" }}>
+                  <p>
+                    When I interact with teens who come to me and they want
+                    something to read and I start asking about what they like to
+                    read and what they’re into or whatever. If I get any sense
+                    that they are secretly asking for materials that feature
+                    queer characters, then I will start grabbing a bunch of
+                    these in addition to everything else and will go “here you
+                    go, take a look at these” because a lot of these twelve,
+                    thirteen, fourteen years olds will not come out and say that
+                    that is what they’re looking for.
+                  </p>
+                </blockquote>
+                <br />
+                <h3>
+                  Interview with Amy, a Public Librarian from a liberal city in
+                  the Pacific Northwest
+                </h3>
+                <AudioPlayer src="https://github.com/Aquite/lis570/blob/main/data/audio/amyPatrons.mp3?raw=true" />
+                <p>Transcript:</p>
+                <blockquote style={{ paddingLeft: "4vw" }}>
+                  <p>
+                    When I interact with teens who come to me and they want
+                    something to read and I start asking about what they like to
+                    read and what they’re into or whatever. If I get any sense
+                    that they are secretly asking for materials that feature
+                    queer characters, then I will start grabbing a bunch of
+                    these in addition to everything else and will go “here you
+                    go, take a look at these” because a lot of these twelve,
+                    thirteen, fourteen years olds will not come out and say that
+                    that is what they’re looking for.
+                  </p>
+                </blockquote>
+                <h3>
+                  Interview with Sally, a Community College Librarian from a
+                  liberal city in New England
+                </h3>
+                <AudioPlayer src="https://github.com/Aquite/lis570/blob/main/data/audio/sallyCollection.mp3?raw=true" />
+                <p>Transcript:</p>
+                <blockquote style={{ paddingLeft: "4vw" }}>
+                  <p>
+                    We do have materials, but not a lot. And I don't think we
+                    would have materials for every identity within the
+                    community. And when I searched for the materials, we have a
+                    lot from the biological and nursing point of view, but not
+                    as many from the sociological point of view ... In my search
+                    I found that there were more fiction materials in that area,
+                    and I think our students and adults, and we do serve adults,
+                    can probably access information that way.
+                  </p>
+                </blockquote>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
                 <h3>
@@ -186,32 +279,32 @@ const Survey = ({ dataSurv }) => {
                 <p>
                   Students are unlikely to go to the library for sex education
                   materials:
-                  <ul>
-                    <li>
-                      46% of respondents rated themselves a Likert “1” for “How
-                      likely are you to go to the library for sex education
-                      materials?”
-                    </li>
-                    <li>
-                      Of the 6% (3) respondents who rated themselves a Likert
-                      “5” for the same question (respondents 7, 17, and 20),
-                      only one self-identified as a student. The student,
-                      respondent 20, also identified as a library professional.
-                      Respondent 17 was the only respondent with a Likert “5”
-                      for this question who was from a conservative state
-                      (Virginia).
-                      <ul>
-                        <li>
-                          Respondent 20 was also the only respondent rated at a
-                          Likert “5” for this question who otherwise seemed
-                          confident in their library’s collection of sex
-                          education materials, respondents 7 & 17 both rated
-                          their confidence in their collections rather low.
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
                 </p>
+                <ul>
+                  <li>
+                    46% of respondents rated themselves a Likert “1” for “How
+                    likely are you to go to the library for sex education
+                    materials?”
+                  </li>
+                  <li>
+                    Of the 6% (3) respondents who rated themselves a Likert “5”
+                    for the same question (respondents 7, 17, and 20), only one
+                    self-identified as a student. The student, respondent 20,
+                    also identified as a library professional. Respondent 17 was
+                    the only respondent with a Likert “5” for this question who
+                    was from a conservative state (Virginia).
+                    <ul>
+                      <li>
+                        Respondent 20 was also the only respondent rated at a
+                        Likert “5” for this question who otherwise seemed
+                        confident in their library’s collection of sex education
+                        materials, respondents 7 & 17 both rated their
+                        confidence in their collections rather low.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
                 <div style={{ width: "100%", height: 300 }}>
                   <ResponsiveContainer>
                     <BarChart
@@ -235,8 +328,8 @@ const Survey = ({ dataSurv }) => {
                 </div>
                 <br />
                 <h3>
-                  Interview with Paula, a Librarian from a liberal city in the
-                  Pacific Northwest
+                  Interview with Paula, a Public Librarian from a liberal city
+                  in the Pacific Northwest
                 </h3>
                 <AudioPlayer src="https://github.com/Aquite/lis570/blob/main/data/audio/paulaPatrons.mp3?raw=true" />
                 <p>Transcript:</p>
