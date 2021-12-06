@@ -13,6 +13,8 @@ import {
   ResponsiveContainer,
   Title,
 } from "recharts";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 
 const Survey = ({ dataSurv }) => {
   console.log(dataSurv);
@@ -113,6 +115,7 @@ const Survey = ({ dataSurv }) => {
                     </li>
                   </ul>
                 </p>
+
                 <div style={{ width: "100%", height: 300 }}>
                   <ResponsiveContainer>
                     <BarChart
@@ -134,6 +137,7 @@ const Survey = ({ dataSurv }) => {
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
+                <br />
               </Tab.Pane>
               <Tab.Pane eventKey="second">
                 <p>
@@ -176,6 +180,9 @@ const Survey = ({ dataSurv }) => {
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
+                <h3>
+                  How Patrons Use the library for sexual education materials
+                </h3>
                 <p>
                   Students are unlikely to go to the library for sex education
                   materials:
@@ -226,6 +233,32 @@ const Survey = ({ dataSurv }) => {
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
+                <br />
+                <h3>
+                  Interview with Paula, a Librarian from a liberal city in the
+                  Pacific Northwest
+                </h3>
+                <AudioPlayer src="https://github.com/Aquite/lis570/blob/main/data/audio/paulaPatrons.mp3?raw=true" />
+                <p>Transcript:</p>
+                <blockquote style={{ paddingLeft: "4vw" }}>
+                  <p>
+                    I will tell you that I have never been asked for books on
+                    sexual education by teens. I don't think I've been ever
+                    asked for a book on sex, that is something that it's so
+                    personal and private that as a rule, teens find that
+                    material on their own and now that we have computers, books
+                    are just one avenue. There's so much material available to
+                    them that they would have to come to a library and ask
+                    anybody for help with that. The people that will ask us for
+                    books on sexuality and all those kinds of things are
+                    parents, helping their younger teen, say tween with that
+                    material so that's another kind of group of people to help
+                    is parents who are trying to describe those kinds of
+                    difficult discussions, or, you know, conversations with
+                    their children that's another audience that we serve with
+                    the sexuality materials.
+                  </p>
+                </blockquote>
               </Tab.Pane>
               <Tab.Pane eventKey="fourth">
                 <p>There is consistent confidence in librarians:</p>
