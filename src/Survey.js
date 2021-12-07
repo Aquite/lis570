@@ -101,7 +101,10 @@ const Survey = ({ dataSurv, dataLib, dataLoc }) => {
                 <Nav.Link eventKey="fifth">Conservativeness</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="sixth">Censorship</Nav.Link>
+                <Nav.Link eventKey="sixth">Patron Complaints</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="seventh">Librarian Confidence</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -453,6 +456,72 @@ const Survey = ({ dataSurv, dataLib, dataLoc }) => {
                   Public Library materials, but these requests rarely come to
                   fruition
                 </h3>
+                <p>Info info info</p>
+                <br />
+                <h3>
+                  Interview with Paula, a Public Librarian from a liberal city
+                  in the Pacific Northwest
+                </h3>
+                <AudioPlayer src="https://github.com/Aquite/lis570/blob/main/data/audio/paulaComplaint.mp3?raw=true" />
+                <p>Transcript:</p>
+                <blockquote style={{ paddingLeft: "4vw" }}>
+                  <p>
+                    Yes, you know, when I was a new librarian, I think It was
+                    like the first year I was a librarian, there was a book that
+                    was about lesbian sex, and it was called something like
+                    Making Out, and it had, like, really vivid pictures of sex,
+                    you know, of women and sex. A patron brought it to me and
+                    opened it to a page that she found completely provocative
+                    and just said "Why do you have this in the library?" so, you
+                    know, I fortunately remained calm and I just said, "you
+                    know, we try to have something for everyone. We want to have
+                    materials, representing things that everybody needs, this
+                    may not be something you need, but we will have a patron who
+                    does want to check that out so I recommend that you not" and
+                    and it's kind of the nature of things that people, you know,
+                    something that they themselves haven't come to understand or
+                    gotten comfortable with. They will, like, their first
+                    reaction is of course very negative, can be very negative,
+                    and like, “I want to get rid of this book because I'm not,
+                    you know, comfortable with this material.” And so yeah, I
+                    think it happens. I don't know what to say. It happens all
+                    the time but I think it's fairly common for people to act on
+                    their own fears, like{" "}
+                    <a href="https://www.washingtonpost.com/opinions/2021/10/29/schools-are-banning-my-book-queer-kids-need-queer-stories/">
+                      Maia Kobabe's Gender Queer thing.
+                    </a>
+                  </p>
+                </blockquote>
+                <br />
+                <h3>
+                  Interview with Rachel, a former Public Librarian from a
+                  liberal city in New England
+                </h3>
+                <AudioPlayer src="https://github.com/Aquite/lis570/blob/main/data/audio/rachelComplaints.mp3?raw=true" />
+                <p>Transcript:</p>
+                <blockquote style={{ paddingLeft: "4vw" }}>
+                  <p>
+                    I was more front-facing so I dealt with a lot of patron
+                    complaints all the time. It's interesting because, a lot of
+                    times, what I would do is I would offer them an outlet for
+                    their complaint “oh, well, if you have this idea or if you
+                    have this, you know, complaints about the library, we have
+                    this form that you can fill out. And it goes directly to
+                    people who are actually making these decisions. So that's
+                    the way that, you know, if you're, if you've got complaints,
+                    you can actually make a, you know, make a difference and
+                    make your voice heard.” And people wouldn't take me up on
+                    it. All they wanted was to yell at someone, you know, they
+                    just wanted to, you know, they just wanted that moment of
+                    catharsis. And I thought that was really interesting because
+                    that kind of proved to me that people just wanted that
+                    moment of catharsis more than they wanted something gone or
+                    changed.
+                  </p>
+                </blockquote>
+              </Tab.Pane>
+              <Tab.Pane eventKey="seventh">
+                <h3>Librarians blah blah blah</h3>
                 <p>Info info info</p>
               </Tab.Pane>
             </Tab.Content>

@@ -93,13 +93,13 @@
 }
 
 .nav-link:not(.active) {
-  background-color: White;
-  color: #4b2e83;
+  background-color: White !important;
+  color: #4b2e83 !important;
 }
 
 .nav-link {
-  background-color: #4b2e83;
-  color: white;
+  background-color: #4b2e83 !important;
+  color: white !important;
 }
 
 h1 {

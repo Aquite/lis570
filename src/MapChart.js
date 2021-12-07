@@ -40,7 +40,7 @@ const MapChart = ({ dataLoc, dataLib, focLib, setFocLib, focMethod }) => {
           >
             {focLib == lib.Library ? (
               <g
-                fill="#009999"
+                fill="#4b2e83"
                 fillOpacity="0.7"
                 stroke="black"
                 strokeWidth="10"
@@ -75,7 +75,7 @@ const MapChart = ({ dataLoc, dataLib, focLib, setFocLib, focMethod }) => {
               </g>
             ) : (
               <g
-                fill="#c13b20"
+                fill="#85754d"
                 fillOpacity="0.7"
                 stroke="black"
                 strokeWidth="10"
