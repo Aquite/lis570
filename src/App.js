@@ -177,6 +177,7 @@ const App = () => {
             <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Taught"} />
             <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Rural"} />
             <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"LGBT"} />
+            <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Homophobic"} />
             <TTest
               dataLib={dataLib}
               dataLoc={dataLoc}
