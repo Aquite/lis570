@@ -109,9 +109,7 @@ const App = () => {
               onSelect={handleSelectMethod}
             >
               <Nav.Item>
-                <Nav.Link eventKey="collections" href="#/home">
-                  Library Collections
-                </Nav.Link>
+                <Nav.Link eventKey="collections">Library Collections</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="questionnaire">Questionnaire</Nav.Link>
