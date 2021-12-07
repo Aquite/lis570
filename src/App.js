@@ -56,7 +56,7 @@ const App = () => {
         <h2>Description</h2>
         <p>
           Only 28 states and DC require that both sex and HIV education be
-          taught in public schools; only eighteen states require that curriculum
+          taught in public schools; Only eighteen states require that curriculum
           be medically accurate. While public libraries could offer a solution
           to lack of sex ed resources, they are faced with the same social and
           political environment that prevents comprehensive sex education from
