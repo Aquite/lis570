@@ -3,6 +3,7 @@ import Tab from "react-bootstrap/Tab";
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import TTest from "./TTest.js";
 import {
   BarChart,
   Bar,
@@ -16,7 +17,7 @@ import {
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 
-const Survey = ({ dataSurv }) => {
+const Survey = ({ dataSurv, dataLib, dataLoc }) => {
   console.log(dataSurv);
   const seekMap = new Map();
   const oftenMap = new Map();
@@ -94,7 +95,13 @@ const Survey = ({ dataSurv }) => {
                 <Nav.Link eventKey="third">Library Use</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="fourth">Librarian Confidence</Nav.Link>
+                <Nav.Link eventKey="fourth">Rural Libraries</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="fifth">Conservativeness</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="sixth">Censorship</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -354,7 +361,99 @@ const Survey = ({ dataSurv }) => {
                 </blockquote>
               </Tab.Pane>
               <Tab.Pane eventKey="fourth">
-                <p>There is consistent confidence in librarians:</p>
+                <h3>
+                  Rural Libraries consistently underperform when compared to
+                  non-rural libraries
+                </h3>
+                <p>
+                  When we administered our collection analysis on 35 libraries,
+                  we noted whether or not the library was in a 'rural' area
+                  according to the Census Bureau. Dividing the libraries into
+                  these two groups and performing a T-Test on the average number
+                  of titles in each library resulted in a p-value of{" "}
+                  <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Rural"} />
+                  . This was the only correlation we could confidently assert
+                  exists through our quantitative methods.
+                </p>
+                <p>
+                  The reason for this discrepancy may result from the fact that
+                  rural libraries serve less people than city libraries, and
+                  thus have smaller budgets to purchase books across the board.
+                  Further research is required to see whether there is a
+                  specific lack of sex education titles, or just a lack of
+                  titles in general in rural libraries.
+                </p>
+                <p>
+                  Even if it's the latter, this is still a red flag. Look at
+                  internet access, for example. The federal government provided
+                  subsidies to telecommunications companies to build rural
+                  infrustructure, because they felt it was imporant that all
+                  citizens have internet access (the telecom companies pocketed
+                  the money without building the infrastructure but that's
+                  besides the point). If we want equitable access to sex
+                  education materials, then we may need to provide additional
+                  funding to rural libraries or implement some sort of free ILL
+                  program to ensure access.
+                </p>
+              </Tab.Pane>
+              <Tab.Pane eventKey="fifth">
+                <h3>
+                  The state a library is located in and the Conservativeness of
+                  the community has an inconclusive effect on the robustness of
+                  sex education titles
+                </h3>
+                <p>
+                  Determining whether or not a state is 'conservative' is
+                  difficult, because there's no clear definiton. We decided to
+                  use multiple metrics to see whether any of them had an effect.
+                </p>
+                <p>
+                  First, we looked at whether states mandated sex education in
+                  public schools, and if the schools choose to teach sex
+                  education, whether they mandate including LGBT education. Both
+                  of these had no effect. Whether states mandate sex education
+                  held a p-value of{" "}
+                  <TTest
+                    dataLib={dataLib}
+                    dataLoc={dataLoc}
+                    metric={"Taught"}
+                  />
+                  , and whether they require LGBT inclusion with sex education
+                  held a p-value of{" "}
+                  <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"LGBT"} />,
+                  just barely above 0.05. Whether or not a state mandates sex
+                  education likely has no effect on the sex education titles
+                  available at the libraries in that state. We didn't look at
+                  every state, and randomly sampling resulted in only 1-2
+                  libraries per state, so we cannot come to any conclusion about
+                  specific states.
+                </p>
+                <p>
+                  The State's conservativeness may not have an effect on
+                  libraries because it is broad enough that it may contain
+                  diverse regions within a staunchly partisan state government.
+                  An additional test we conducted was whether the library is
+                  located in a county that was won by Donald Trump in the 2020
+                  presidental election. Through this metric, we found a p-value
+                  of{" "}
+                  <TTest
+                    dataLib={dataLib}
+                    dataLoc={dataLoc}
+                    metric={"TrumpWin"}
+                  />
+                  , just barely above the 0.05 threshold. This may also be
+                  confounded because Trump won the majority of the rural vote.
+                  So conservative counties may have less sex education books
+                  because overall, they are simply more rural.
+                </p>
+              </Tab.Pane>
+              <Tab.Pane eventKey="sixth">
+                <h3>
+                  Patrons routinely and consistently request censorship of
+                  Public Library materials, but these requests rarely come to
+                  fruition
+                </h3>
+                <p>Info info info</p>
               </Tab.Pane>
             </Tab.Content>
           </Col>

@@ -19,7 +19,7 @@ const TTest = ({ dataLib, dataLoc, metric }) => {
   }
   const test = ttest(sex, noSex);
 
-  return <p>{metric + ": " + test.pValue()}</p>;
+  return Math.round(test.pValue() * 100000) / 100000;
 };
 
 export default TTest;

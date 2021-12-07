@@ -98,9 +98,9 @@ const App = () => {
           prospective quotes that we think are worth publishing on the site for
           peer review.
         </p>
-        <h2>View Our Raw Data</h2>
+        <h2>View Our Raw Quantitative Data</h2>
         {loadingLoc || loadingLib ? (
-          <p>Loading...</p>
+          <p>Loading raw data...</p>
         ) : (
           <React.Fragment>
             <Nav
@@ -116,19 +116,16 @@ const App = () => {
               <Nav.Item>
                 <Nav.Link eventKey="questionnaire">Questionnaire</Nav.Link>
               </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="interviews">Librarian Interviews</Nav.Link>
-              </Nav.Item>
             </Nav>
-            <MapChart
-              dataLoc={dataLoc}
-              dataLib={dataLib}
-              focLib={focLib}
-              setFocLib={setFocLib}
-              focMethod={focMethod}
-            />
             {focMethod == "collections" ? (
               <React.Fragment>
+                <MapChart
+                  dataLoc={dataLoc}
+                  dataLib={dataLib}
+                  focLib={focLib}
+                  setFocLib={setFocLib}
+                  focMethod={focMethod}
+                />
                 <p>{focLib}</p>
                 <Container style={{ margin: "0 auto", maxWidth: "50em" }}>
                   <Row>
@@ -155,36 +152,21 @@ const App = () => {
                   </Row>
                 </Container>
               </React.Fragment>
+            ) : focMethod == "questionnaire" ? (
+              <iframe
+                width="100%"
+                height="600"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTVfGFHbWmuD9jYWhSdvNPHPfjXdovjTFBiVm4V-x3xbLEaFBEHQxf4vhWPZBFV7ee3nhECP4LNy1y6/pubhtml?gid=29074251&amp;single=true&amp;widget=true&amp;headers=false"
+              ></iframe>
             ) : null}
           </React.Fragment>
         )}
         <h2>View Our Findings</h2>
         <br />
-        {loadingSurv ? (
+        {loadingLoc || loadingLib || loadingSurv ? (
           <p>Loading Findings...</p>
         ) : (
-          <Survey dataSurv={dataSurv} />
-        )}
-        {loadingLoc || loadingLib ? null : (
-          <React.Fragment>
-            <h2>Ask a Librarian</h2>
-            <ul>
-              <li>Collection Development</li>
-              <li>Accessibility</li>
-              <li>Censorship</li>
-            </ul>
-            <p>P-values:</p>
-            <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Taught"} />
-            <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Rural"} />
-            <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"LGBT"} />
-            <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"Homophobic"} />
-            <TTest
-              dataLib={dataLib}
-              dataLoc={dataLoc}
-              metric={"Conservative"}
-            />
-            <TTest dataLib={dataLib} dataLoc={dataLoc} metric={"TrumpWin"} />
-          </React.Fragment>
+          <Survey dataSurv={dataSurv} dataLib={dataLib} dataLoc={dataLoc} />
         )}
         <h2>Definitions</h2>
         <Definitions />
