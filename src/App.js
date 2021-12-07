@@ -55,48 +55,37 @@ const App = () => {
         <h1>LIS 570 Sex Education and Libraries</h1>
         <h2>Description</h2>
         <p>
-          We evaluated collections based on their sex education materials by
-          searching 30 online public library catalogs; these were distributed
-          geographically across the country as well as varying in size, with
-          city-, county-, and statewide library systems. We cross-checked these
-          catalogs with a list of core sex education materials (20 titles) that
-          we developed based on booklists from multiple public libraries, the
-          H.W. Wilson nonfiction core collection, and School Library Journal, as
-          well as a keyword search list (10 keywords) to discover other sex
-          education materials in each catalog. After conducting this collection
-          analysis, we created a United States map with tagged geolocations for
-          each collection. If you click on one of the location pins, there is a
-          visual representation of which core collection books the library
-          provides. If a book is not available, it is greyed out. We also input
-          data about if the library is rural, conservative, and so on.
+          Only 28 states and DC require that both sex and HIV education be
+          taught in public schools; only eighteen states require that curriculum
+          be medically accurate. While public libraries could offer a solution
+          to lack of sex ed resources, they are faced with the same social and
+          political environment that prevents comprehensive sex education from
+          being a mandatory part of public education. Family Planning education
+          services in libraries can lose federal and local funding for
+          referencing politicized information such as abortion or transgender
+          healthcare. Libraries — and librarians — may be faced with increased
+          patron or parent complaints in response to the inclusion of certain
+          sex education materials.
         </p>
         <p>
-          Additionally, we surveyed a mixture of the public, library
-          professionals, and educators to gain a nuanced perspective on the
-          state of sex education materials, the obstacles people have faced when
-          accessing them, and their impact. There were sections for library
-          patrons, library professionals, and educators, with 6–10 questions
-          each. We received 50 responses in total; the final website will also
-          present some analysis of our survey findings. This code needs to be
-          finalized, but we have included our preliminary findings for peer
-          review in order to identify the strongest data for publishing on the
-          site.
+          What do the sex education materials in public library collections look
+          like? What are they missing? What do patrons think of their library's
+          offerings on the subject? Are they even turning to the library for
+          this information? And what have librarians discovered about this
+          sensitive topic in the public sphere as they try to both provide
+          accurate and current information as well as mitigate complaints and
+          censorship?
         </p>
         <p>
-          Finally, we interviewed four public library professionals to determine
-          public libraries’ culture regarding sex education materials and
-          questions as well as public libraries’ typical response to external
-          pressure regarding exclusion of sex education materials. We asked each
-          librarian about their daily professional life, community demographics,
-          robustness of their library collection, patron interactions
-          (information-seeking, complaints, etc), and censorship. Our final
-          website will also include key observations and quotes from these
-          interviews. To recreate the interview experience, we would like to
-          have sound files play these quotes aloud (with accessibility
-          alt-text); to maintain the anonymity we promised our interviewees, we
-          will record these soundbites with our voices. We have included some
-          prospective quotes that we think are worth publishing on the site for
-          peer review.
+          Below is a US map with 30 library systems across the country; their
+          catalogs have been searched to see if they have particular sex
+          education materials recommended by collection development guides and
+          library reading lists. There are further insights from respondents of
+          a questionnaire and librarian interviewees. These center around four
+          issues found in the topic of sex ed and libraries: library use,
+          materials use, librarian confidence, and internet use. Patrons
+          indicate that libraries are not where they immediately turn for this
+          information; librarians echo this sentiment.
         </p>
         <h2>View Our Raw Quantitative Data</h2>
         {loadingLoc || loadingLib ? (

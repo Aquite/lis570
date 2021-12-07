@@ -456,7 +456,16 @@ const Survey = ({ dataSurv, dataLib, dataLoc }) => {
                   Public Library materials, but these requests rarely come to
                   fruition
                 </h3>
-                <p>Info info info</p>
+                <p>
+                  All of our librarians reported facing patron complaints about
+                  library materials, yet books were never removed from the
+                  library collection because of patron complaints. At least,
+                  this is true from the Public Librarians we interviewed. One
+                  interviewee mentioned that this resilience against patron
+                  complaints may not be true for school libraries, so future
+                  research may look into the efficacy of complaints on the
+                  removal of school library materials.
+                </p>
                 <br />
                 <h3>
                   Interview with Paula, a Public Librarian from a liberal city
@@ -521,8 +530,24 @@ const Survey = ({ dataSurv, dataLib, dataLoc }) => {
                 </blockquote>
               </Tab.Pane>
               <Tab.Pane eventKey="seventh">
-                <h3>Librarians blah blah blah</h3>
-                <p>Info info info</p>
+                <h3>
+                  Despite rarely using librarians as a direct resource, patrons
+                  are confident they can assist
+                </h3>
+                <p>
+                  While the librarians we surveyed rarely felt their jobs were
+                  in jeopardy for helping patrons, respondents did express being
+                  underutilized in providing sex education directly which the
+                  librarians we interviewed corroborated. Three of these
+                  interviewees reported rarely, if ever, being asked a sex
+                  education question directly by a patron. However, librarians
+                  were occasionally utilized by parents looking for sex
+                  education for their teens. In our survey, the majority of
+                  respondents reported trust in their local librarians to locate
+                  and provide them with relevant material, however almost none
+                  of our participants actually asked their librarians. This may
+                  be because they're embarrased, or didn't find a need to.
+                </p>
               </Tab.Pane>
             </Tab.Content>
           </Col>
