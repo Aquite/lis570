@@ -224,6 +224,7 @@ const Survey = ({ dataSurv, dataLib, dataLoc }) => {
                   curated their collections to include sex education and LGBT
                   materials:
                 </p>
+                <br />
                 <h3>
                   Interview with Amy, a Librarian from a liberal city in the
                   Pacific Northwest
@@ -244,25 +245,6 @@ const Survey = ({ dataSurv, dataLib, dataLoc }) => {
                   </p>
                 </blockquote>
                 <br />
-                <h3>
-                  Interview with Amy, a Public Librarian from a liberal city in
-                  the Pacific Northwest
-                </h3>
-                <AudioPlayer src="https://github.com/Aquite/lis570/blob/main/data/audio/amyPatrons.mp3?raw=true" />
-                <p>Transcript:</p>
-                <blockquote style={{ paddingLeft: "4vw" }}>
-                  <p>
-                    When I interact with teens who come to me and they want
-                    something to read and I start asking about what they like to
-                    read and what they’re into or whatever. If I get any sense
-                    that they are secretly asking for materials that feature
-                    queer characters, then I will start grabbing a bunch of
-                    these in addition to everything else and will go “here you
-                    go, take a look at these” because a lot of these twelve,
-                    thirteen, fourteen years olds will not come out and say that
-                    that is what they’re looking for.
-                  </p>
-                </blockquote>
                 <h3>
                   Interview with Sally, a Community College Librarian from a
                   liberal city in New England
@@ -360,6 +342,27 @@ const Survey = ({ dataSurv, dataLib, dataLoc }) => {
                     difficult discussions, or, you know, conversations with
                     their children that's another audience that we serve with
                     the sexuality materials.
+                  </p>
+                </blockquote>
+                <br />
+                <h3>
+                  Interview with Amy, a Public Librarian from a liberal city in
+                  the Pacific Northwest
+                </h3>
+                <AudioPlayer src="https://github.com/Aquite/lis570/blob/main/data/audio/amyDisplays.mp3?raw=true" />
+                <p>Transcript:</p>
+                <blockquote style={{ paddingLeft: "4vw" }}>
+                  <p>
+                    When I was in library school in the early 2000s, we had a
+                    chance to go to a middle school and do a display and mine
+                    was about gay kids. At the time, having an openly gay
+                    character was revolutionary but I presented it in a way that
+                    wasn’t like this is the topic, it just happened to be a
+                    theme in all of it. I’ll never forget, these kids coming up
+                    and looking and go “is this about gay kids?” And then
+                    talking to them. A couple of them, they were like “wow” and
+                    then just stayed with me the whole time and that really made
+                    an impression on me.
                   </p>
                 </blockquote>
               </Tab.Pane>
