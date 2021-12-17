@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./header/header-mini.js";
 import MapChart from "./MapChart";
 import TTest from "./TTest.js";
+import Cover from "./Cover.js";
 import Survey from "./Survey.js";
 import Definitions from "./Definitions.js";
 import React, { useState } from "react";
