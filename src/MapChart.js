@@ -46,7 +46,7 @@ const MapChart = ({ dataLoc, dataLib, focLib, setFocLib, focMethod }) => {
                 strokeWidth="10"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                transform="scale(0.1) translate(-132, -280.5)"
+                transform="scale(0.15) translate(-132, -280.5)"
               >
                 <g>
                   <path
@@ -81,7 +81,7 @@ const MapChart = ({ dataLoc, dataLib, focLib, setFocLib, focMethod }) => {
                 strokeWidth="10"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                transform="scale(0.1) translate(-132, -280.5)"
+                transform="scale(0.15) translate(-132, -280.5)"
               >
                 <g>
                   <path

@@ -3,12 +3,11 @@ import Table from "react-bootstrap/Table";
 
 const Definitions = () => {
   return (
-    <Table hover>
+    <Table hover size="sm">
       <thead>
         <tr>
           <th>Term</th>
           <th>Definition</th>
-          <th>Citation</th>
         </tr>
       </thead>
       <tbody>
@@ -28,8 +27,7 @@ const Definitions = () => {
             determine whether a comprehensive understanding of sexual health is
             promoted and attainable through information available in public
             libraries.
-          </td>
-          <td>
+            <br />
             <a href="https://www.who.int/teams/sexual-and-reproductive-health-and-research/key-areas-of-work/sexual-health/defining-sexual-health">
               World Health Organization
             </a>
@@ -48,8 +46,7 @@ const Definitions = () => {
             orientation; interpersonal and sexual violence; contraception,
             pregnancy, and reproduction; and HIV and other STDs/STIs" (SIECUS,
             2020)
-          </td>
-          <td>
+            <br />
             <a href="https://siecus.org/wp-content/uploads/2020/03/NSES-2020-2.pdf">
               SIECUS
             </a>
@@ -67,7 +64,6 @@ const Definitions = () => {
             extent at a specified point or points in public schools between
             grades K-12.
           </td>
-          <td></td>
         </tr>
         <tr>
           <td>Pleasure-Based Sex Education</td>
@@ -82,8 +78,7 @@ const Definitions = () => {
             specify this form of sex education to differentiate pleasure-based
             information from curricula and materials focused solely on the
             reproductive aspects of sexual expression.
-          </td>
-          <td>
+            <br />
             <a href="https://www.plannedparenthood.org/planned-parenthood-st-louis-region-southwest-missouri/blog/that-8-letter-word-including-pleasure-in-sex-education">
               Planned Parenthood
             </a>
@@ -104,9 +99,8 @@ const Definitions = () => {
             The census defines "rural" as "any population, housing, or territory
             NOT in an urban area" (Census, 2021). The Census also stipulates
             that "To qualify as an urban area, the territory identified [...]
-            must encompass at least 2,500 people" (Census, 2021).{" "}
-          </td>
-          <td>
+            must encompass at least 2,500 people" (Census, 2021).
+            <br />
             <a href="https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural/2010-urban-rural.html">
               Census Bureau
             </a>
@@ -119,7 +113,6 @@ const Definitions = () => {
             recent voting trends in the region. Conservative states are states
             which voted Republican in the 2020 presidential election.
           </td>
-          <td></td>
         </tr>
         <tr>
           <td>External Censorship</td>
@@ -129,7 +122,6 @@ const Definitions = () => {
             forces may include government, community pressure, and school
             administrations.
           </td>
-          <td></td>
         </tr>
         <tr>
           <td>Collection Development </td>
@@ -138,7 +130,6 @@ const Definitions = () => {
             library's policy and practice regarding acquisition and retention of
             sex education materials.
           </td>
-          <td></td>
         </tr>
       </tbody>
     </Table>
