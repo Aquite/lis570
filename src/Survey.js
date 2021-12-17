@@ -18,7 +18,6 @@ import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 
 const Survey = ({ dataSurv, dataLib, dataLoc }) => {
-  console.log(dataSurv);
   const seekMap = new Map();
   const oftenMap = new Map();
   const goMap = new Map();
@@ -75,7 +74,6 @@ const Survey = ({ dataSurv, dataLib, dataLoc }) => {
   go.sort((e1, e2) => {
     return e1.Rating > e2.Rating;
   });
-  console.log(go);
 
   return (
     <React.Fragment>

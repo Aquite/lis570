@@ -11,14 +11,19 @@ const Cover = ({ img, title, author, em }) => {
       key={title}
       placement="top"
       overlay={
-        <Popover id={`tooltip-${title}}`}>
-          <Popover.Header as="h2">{title}</Popover.Header>
-          <Popover.Body>
-            Author: {author}
-            <br />
-            {em ? "Not Included" : "Included"}
-          </Popover.Body>
-        </Popover>
+        em ? (
+          <Popover id={`tooltip-${title}}`}>
+            <Popover.Header as="h2">{title}</Popover.Header>
+            <Popover.Body>{author}</Popover.Body>
+          </Popover>
+        ) : (
+          <Popover id={`tooltip-${title}}`}>
+            <Popover.Header style={{ backgroundColor: "lightgreen" }} as="h2">
+              {title}
+            </Popover.Header>
+            <Popover.Body>{author}</Popover.Body>
+          </Popover>
+        )
       }
     >
       <Card style={{ width: "auto" }}>
