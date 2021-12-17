@@ -125,6 +125,7 @@ const App = () => {
                             title={book.Title}
                             author={book.Author}
                             em={book[focLib] == 0}
+                            foc={focLib}
                           />
                         </Col>
                       );

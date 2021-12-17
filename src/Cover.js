@@ -5,25 +5,28 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import Popover from "react-bootstrap/Popover";
 
-const Cover = ({ img, title, author, em }) => {
+const Cover = ({ img, title, author, em, foc }) => {
   return (
     <OverlayTrigger
       key={title}
       placement="top"
       overlay={
-        em ? (
-          <Popover id={`tooltip-${title}}`}>
-            <Popover.Header as="h2">{title}</Popover.Header>
-            <Popover.Body>{author}</Popover.Body>
-          </Popover>
-        ) : (
-          <Popover id={`tooltip-${title}}`}>
-            <Popover.Header style={{ backgroundColor: "lightgreen" }} as="h2">
-              {title}
+        <Popover id={`tooltip-${title}}`}>
+          {foc !=
+          "Click a marker on the map to show library-specifc results!" ? (
+            <Popover.Header
+              style={!em ? { backgroundColor: "lightgreen" } : null}
+              as="h2"
+            >
+              {em ? "Missing" : "Included"}
             </Popover.Header>
-            <Popover.Body>{author}</Popover.Body>
-          </Popover>
-        )
+          ) : null}
+          <Popover.Body>
+            {title}
+            <br />
+            {author}
+          </Popover.Body>
+        </Popover>
       }
     >
       <Card style={{ width: "auto" }}>
