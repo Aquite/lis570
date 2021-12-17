@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
+
 import Nav from "react-bootstrap/Nav";
 
 function importAll(r) {
@@ -120,20 +120,12 @@ const App = () => {
                     {dataLib.slice(0, 20).map((book) => {
                       return (
                         <Col className="w-sm-10 w-20">
-                          <Card style={{ width: "auto" }}>
-                            {book[focLib] == 0 ? (
-                              <Card.Img
-                                src={covers[book.image].default}
-                                alt={"not included: " + book.Title}
-                                className="gs"
-                              />
-                            ) : (
-                              <Card.Img
-                                src={covers[book.image].default}
-                                alt={"included: " + book.Title}
-                              />
-                            )}
-                          </Card>
+                          <Cover
+                            img={covers[book.image].default}
+                            title={book.Title}
+                            author={book.Author}
+                            em={book[focLib] == 0}
+                          />
                         </Col>
                       );
                     })}
