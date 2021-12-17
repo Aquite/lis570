@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Overlay from "react-bootstrap/Overlay";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import Popover from "react-bootstrap/Popover";
 
 const Cover = ({ img, title, author, em }) => {
   return (
@@ -10,11 +11,14 @@ const Cover = ({ img, title, author, em }) => {
       key={title}
       placement="top"
       overlay={
-        <Tooltip id={`tooltip-${title}}`}>
-          Title: {title}
-          <br />
-          Author: {author}
-        </Tooltip>
+        <Popover id={`tooltip-${title}}`}>
+          <Popover.Header as="h2">{title}</Popover.Header>
+          <Popover.Body>
+            Author: {author}
+            <br />
+            {em ? "Not Included" : "Included"}
+          </Popover.Body>
+        </Popover>
       }
     >
       <Card style={{ width: "auto" }}>
