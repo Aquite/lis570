@@ -22,7 +22,7 @@ const Cover = ({ img, title, author, em, foc }) => {
             </Popover.Header>
           ) : null}
           <Popover.Body>
-            {title}
+            <i>{title}</i>
             <br />
             {author}
           </Popover.Body>
